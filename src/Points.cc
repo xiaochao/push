@@ -40,6 +40,9 @@ bool GetOneUser(MYSQL *conn, char userid, struct Points &people, map<char*, stru
 	MYSQL_RES *result = mysql_store_result(conn);
 	if(result == NULL)
 		return false;
+	int num_rows = mysql_num_rows(result);
+	if(num <= 0)
+		return false;
 
 	MYSQL_ROW row = mysql_fetch_row(result);
 	strcpy(temp, row[1]);
@@ -70,8 +73,6 @@ bool AuthPeople(char *userid, struct Points &node)
 	sprintf(buf, "%d", later);
 
 	int fday = ftm->tm_mday, sday = stm->tm_mday;
-	if(fday == sday)
-		return true;
 
 	char seed[16], update[256];
 	MYSQL *conn = Connect("127.0.0.1", "root", "123456", "push");
@@ -79,30 +80,69 @@ bool AuthPeople(char *userid, struct Points &node)
 	int updatetime = atoi(update);
 	struct tm *utm = localtime(&updatetime);
 	int uday = utm->tm_mday;
-	if(uday == fday)
+	if(uday != sday)
 		return false;
+	if(formor == 0)
+	{
+		char sql[256] = "insert into points(userid, number, lave, seed, time) values(";
+		char buf[128];
+		strcat(sql, userid);
+		strcat(sql, ", 0, ");
+		sprintf(buf, "%d", atoi(seed)*10);
+		strcat(sql, buf);
+		strcat(sql, ", ");
+		strcat(sql, seed);
+		strcat(sql, ", ");
+		sprintf(buf, "%d", later);
+		strcat(sql, buf);
+		cout<<"sql:"<<sql<<endl;
+		if(mysql_query(conn, sql))
+			return false;
+	}
+	else
+	{
+		if(fday == sday)
+			return true;
 
-	int iseed = atoi(seed);
-	char sql[256]="update points set seed=";
-	strcat(sql, seed);
-	strcat(sql, ",lave=seed*10,number=0,time=");
-	strcat(sql, buf);
-	strcat(sql, " where userid=");
-	strcat(sql, userid);
-	int res = mysql_query(conn, sql);
-	if(res)
-		return false;
+		int iseed = atoi(seed);
+		char sql[256]="update points set seed=";
+		strcat(sql, seed);
+		strcat(sql, ",lave=seed*10,number=0,time=");
+		strcat(sql, buf);
+		strcat(sql, " where userid=");
+		strcat(sql, userid);
+		int res = mysql_query(conn, sql);
+		if(res)
+			return false;
 
-	strcpy(node.gettime, buf);
-	sprintf(buf, "%d", iseed*10);
-	strcpy(node.lave, buf);
-	strcpy(node.number, "0");
-	strcpy(node.seed, seed);
+		strcpy(node.gettime, buf);
+		sprintf(buf, "%d", iseed*10);
+		strcpy(node.lave, buf);
+		strcpy(node.number, "0");
+		strcpy(node.seed, seed);
+	}
+	mysql_close(conn);
 	return true;
 }
 
-int GetPoints(char* userid, map<char*, struct Points> &users)
+int GetPoints(MYSQL *conn, char* userid, map<char*, struct Points> &users)
 {
+	map<char*, struct Points>::iterator ite = users.find(userid);
+	struct Points temp;
+	if(ite == users.end())
+	{
+		bool re = GetOneUser(conn, userid, temp, users);
+		if(!re)
+		{
+			temp.gettime = 0;
+			users[userid] = temp;
+		}
+	}
+
+	bool re = AuthPeople(userid, users[userid]);
+	if(!re)
+		return 0;
+	
 	struct Points people = users[userid];
 	char buf1[128], buf2[128];
 	int integr = GetRandom(1, atoi(people.lave));	
