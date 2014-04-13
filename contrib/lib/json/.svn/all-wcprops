@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/system/!svn/ver/2/push/contrib/lib/json
+END
+libjson.a
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/system/!svn/ver/2/push/contrib/lib/json/libjson.a
+END
+libjson.so
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/system/!svn/ver/2/push/contrib/lib/json/libjson.so
+END

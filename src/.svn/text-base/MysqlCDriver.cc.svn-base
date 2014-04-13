@@ -1,0 +1,115 @@
+#include "MysqlCDriver.h"
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+MYSQL *Connect(char* ip, char* username, char* password, char* dbname)
+{
+	MYSQL *conn_ptr;
+	conn_ptr = mysql_init(NULL);
+
+	if( !conn_ptr )
+	{
+		printf("mysql_init failed\n");
+		return NULL;
+	}
+
+//	printf("%s\t%s\t%s\t%s\n", ip, username, password, dbname);
+	conn_ptr = mysql_real_connect(conn_ptr, ip, username, password, dbname, 0, NULL, 0);
+	if(!conn_ptr)
+	{
+		printf("Connection failed\n");
+		return NULL;
+	}
+
+	return conn_ptr;
+}
+
+bool CreateTable(MYSQL *conn_ptr, char* tablename)
+{
+	char cc[256] = "create table ";
+	strcat(cc, tablename);
+	strcat(cc, "(id int, content varchar(200))");
+	int res = mysql_query(conn_ptr, cc);
+	if(res)
+		return false;
+	return true;
+}
+
+bool InsertTable(MYSQL *conn_ptr, char* tablename, char* id, char* msg)
+{
+	char cc[256] = "insert into ";
+	strcat(cc, tablename);
+	strcat(cc, " values(");
+	strcat(cc, id);
+	strcat(cc, ", ");
+	strcat(cc, msg);
+	strcat(cc, ")");
+	int res = mysql_query(conn_ptr, cc);
+	if(res)
+		return false;
+	return true;
+}
+
+void CloseConnect(MYSQL *conn_ptr)
+{
+	mysql_close(conn_ptr);
+}
+
+string trim(string strr)
+{
+	string str = strr;
+	if(str.empty())
+		return str;
+	int i = 0;
+	for(i=0; i<str.length(); i++)
+		if(str[i] != ' ')
+			break;
+	str = str.substr(i, str.length()-i);
+	for(i=str.length()-1; i>=0;  i--)
+		if(str[i] != ' ')
+			break;
+	str = str.substr(0, i+1);
+	return str;
+}
+
+map<string, string> LoadConfig(const char *path)
+{
+	map<string, string> config;
+	ifstream file(path);
+	string str;
+	if(!file)
+	{
+		cout<<"配置文件不存在"<<endl;
+		return config;
+	}
+	while(file >> str)
+	{
+		str = trim(str);
+		if(str[0] == '#')
+			continue;
+		int npos = str.find('=');
+		string key = trim(str.substr(0, npos));
+		string value = trim(str.substr(npos+1, str.length()-npos-1));
+		config[key] = value;
+	}
+	file.close();
+	return config;
+}
+
+void GetIp(char *buf, const char *eth)
+{
+	char ip[20], command[100] = "ifconfig ";
+	strcat(command, eth);
+	strcat(command,"|grep 'inet '|awk -F' ' '{print $2}'|awk -F':' '{print $2}'");
+	FILE *pp;
+	if((pp = popen(command, "r")) == NULL)
+	{
+		cout<<"run command error ---"<<command<<endl;
+		return;
+	}
+
+	fgets(buf, 16, pp);
+	buf[strlen(buf)-1] = '\0';
+	pclose(pp);
+}

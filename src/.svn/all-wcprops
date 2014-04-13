@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/system/!svn/ver/28/push/src
+END
+MysqlCDriver.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/system/!svn/ver/12/push/src/MysqlCDriver.cc
+END
+MysqlCDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/system/!svn/ver/12/push/src/MysqlCDriver.h
+END
+Server.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/system/!svn/ver/30/push/src/Server.cc
+END
+EventServer.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/system/!svn/ver/36/push/src/EventServer.cc
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/system/!svn/ver/32/push/src/CMakeLists.txt
+END
+OperateChar.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/system/!svn/ver/36/push/src/OperateChar.cc
+END
+Client.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/system/!svn/ver/14/push/src/Client.cc
+END
+OperateChar.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/system/!svn/ver/36/push/src/OperateChar.h
+END
+Control.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/system/!svn/ver/28/push/src/Control.cc
+END
+EventClient.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/system/!svn/ver/35/push/src/EventClient.cc
+END

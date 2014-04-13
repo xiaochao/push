@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/client.dir/Client.cc.o CMakeFiles/client.dir/MysqlCDriver.cc.o  -o client -rdynamic -L/usr/lib/mysql -L/usr/local/lib -L/home/xiaochao/project/system/push/contrib/lib/json -ljson -lpthread -lmysqlclient -levent -Wl,-rpath,/usr/lib/mysql:/usr/local/lib:/home/xiaochao/project/system/push/contrib/lib/json 

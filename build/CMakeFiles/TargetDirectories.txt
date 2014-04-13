@@ -1,0 +1,6 @@
+/home/xiaochao/project/system/push/build/src/CMakeFiles/client.dir
+/home/xiaochao/project/system/push/build/src/CMakeFiles/control.dir
+/home/xiaochao/project/system/push/build/src/CMakeFiles/event_client.dir
+/home/xiaochao/project/system/push/build/src/CMakeFiles/event_server.dir
+/home/xiaochao/project/system/push/build/src/CMakeFiles/server.dir
+/home/xiaochao/project/system/push/build/src/CMakeFiles/test.dir

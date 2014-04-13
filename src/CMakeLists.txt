@@ -1,0 +1,6 @@
+add_executable(client Client.cc MysqlCDriver.cc)
+add_executable(event_client EventClient.cc MysqlCDriver.cc)
+add_executable(server Server.cc MysqlCDriver.cc OperateChar.cc)
+add_executable(event_server EventServer.cc MysqlCDriver.cc OperateChar.cc )
+add_executable(control Control.cc MysqlCDriver.cc)
+add_executable(test test.cc MysqlCDriver.cc)

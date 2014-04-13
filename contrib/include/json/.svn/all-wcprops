@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/system/!svn/ver/1/push/contrib/include/json
+END
+json.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/system/!svn/ver/1/push/contrib/include/json/json.h
+END
+value.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/system/!svn/ver/1/push/contrib/include/json/value.h
+END
+writer.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/system/!svn/ver/1/push/contrib/include/json/writer.h
+END
+features.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/system/!svn/ver/1/push/contrib/include/json/features.h
+END
+reader.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/system/!svn/ver/1/push/contrib/include/json/reader.h
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/system/!svn/ver/1/push/contrib/include/json/config.h
+END
+autolink.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/system/!svn/ver/1/push/contrib/include/json/autolink.h
+END
+forwards.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/system/!svn/ver/1/push/contrib/include/json/forwards.h
+END
