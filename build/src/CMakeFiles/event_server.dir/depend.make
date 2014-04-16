@@ -12,6 +12,7 @@ src/CMakeFiles/event_server.dir/EventServer.cc.o: ../contrib/include/json/writer
 src/CMakeFiles/event_server.dir/EventServer.cc.o: ../src/EventServer.cc
 src/CMakeFiles/event_server.dir/EventServer.cc.o: ../src/MysqlCDriver.h
 src/CMakeFiles/event_server.dir/EventServer.cc.o: ../src/OperateChar.h
+src/CMakeFiles/event_server.dir/EventServer.cc.o: ../src/Points.h
 src/CMakeFiles/event_server.dir/EventServer.cc.o: /usr/include/mysql/errmsg.h
 src/CMakeFiles/event_server.dir/EventServer.cc.o: /usr/include/mysql/my_alloc.h
 src/CMakeFiles/event_server.dir/EventServer.cc.o: /usr/include/mysql/my_list.h
@@ -34,4 +35,16 @@ src/CMakeFiles/event_server.dir/MysqlCDriver.cc.o: /usr/include/mysql/typelib.h
 
 src/CMakeFiles/event_server.dir/OperateChar.cc.o: ../src/OperateChar.cc
 src/CMakeFiles/event_server.dir/OperateChar.cc.o: ../src/OperateChar.h
+
+src/CMakeFiles/event_server.dir/Points.cc.o: ../src/MysqlCDriver.h
+src/CMakeFiles/event_server.dir/Points.cc.o: ../src/Points.cc
+src/CMakeFiles/event_server.dir/Points.cc.o: ../src/Points.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/errmsg.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/my_alloc.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/my_list.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/mysql.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/mysql_com.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/mysql_time.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/mysql_version.h
+src/CMakeFiles/event_server.dir/Points.cc.o: /usr/include/mysql/typelib.h
 

@@ -92,16 +92,41 @@ src/CMakeFiles/test.dir/MysqlCDriver.cc.o.provides: src/CMakeFiles/test.dir/Mysq
 
 src/CMakeFiles/test.dir/MysqlCDriver.cc.o.provides.build: src/CMakeFiles/test.dir/MysqlCDriver.cc.o
 
+src/CMakeFiles/test.dir/Points.cc.o: src/CMakeFiles/test.dir/flags.make
+src/CMakeFiles/test.dir/Points.cc.o: ../src/Points.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/test.dir/Points.cc.o"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/Points.cc.o -c /home/xiaochao/project/system/push/src/Points.cc
+
+src/CMakeFiles/test.dir/Points.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/Points.cc.i"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/xiaochao/project/system/push/src/Points.cc > CMakeFiles/test.dir/Points.cc.i
+
+src/CMakeFiles/test.dir/Points.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/Points.cc.s"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/xiaochao/project/system/push/src/Points.cc -o CMakeFiles/test.dir/Points.cc.s
+
+src/CMakeFiles/test.dir/Points.cc.o.requires:
+.PHONY : src/CMakeFiles/test.dir/Points.cc.o.requires
+
+src/CMakeFiles/test.dir/Points.cc.o.provides: src/CMakeFiles/test.dir/Points.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/Points.cc.o.provides.build
+.PHONY : src/CMakeFiles/test.dir/Points.cc.o.provides
+
+src/CMakeFiles/test.dir/Points.cc.o.provides.build: src/CMakeFiles/test.dir/Points.cc.o
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/test.cc.o" \
-"CMakeFiles/test.dir/MysqlCDriver.cc.o"
+"CMakeFiles/test.dir/MysqlCDriver.cc.o" \
+"CMakeFiles/test.dir/Points.cc.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 src/test: src/CMakeFiles/test.dir/test.cc.o
 src/test: src/CMakeFiles/test.dir/MysqlCDriver.cc.o
+src/test: src/CMakeFiles/test.dir/Points.cc.o
 src/test: src/CMakeFiles/test.dir/build.make
 src/test: src/CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable test"
@@ -113,6 +138,7 @@ src/CMakeFiles/test.dir/build: src/test
 
 src/CMakeFiles/test.dir/requires: src/CMakeFiles/test.dir/test.cc.o.requires
 src/CMakeFiles/test.dir/requires: src/CMakeFiles/test.dir/MysqlCDriver.cc.o.requires
+src/CMakeFiles/test.dir/requires: src/CMakeFiles/test.dir/Points.cc.o.requires
 .PHONY : src/CMakeFiles/test.dir/requires
 
 src/CMakeFiles/test.dir/clean:

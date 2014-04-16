@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/test.dir/test.cc.o"
   "CMakeFiles/test.dir/MysqlCDriver.cc.o"
+  "CMakeFiles/test.dir/Points.cc.o"
   "test.pdb"
   "test"
 )

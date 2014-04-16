@@ -1,10 +1,17 @@
 #include <iostream>
-#include "MysqlCDriver.h"
+#include <map>
+#include "Points.h"
 using namespace std;
 
 int main(void) 
 {
+	char userid[] = "12345";
+	map<string, struct Points> temp;
 	MYSQL *conn = Connect((char*)"127.0.0.1", (char*)"root", (char*)"123456", (char*)"push");
-	InsertLocationTable(conn, (char*)"123456", (char*)"77.1", (char*)"88.1");
+	int res = InitUsers(conn, temp);
+	res = GetPoints(conn, userid, temp);
+	cout<<res<<"\t"<<temp.size()<<endl;
+	res = UpdateLavePoints(conn, userid, res);
+	cout<<res<<"\t"<<temp.size()<<endl;
 	return 0;
 }

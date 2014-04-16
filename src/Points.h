@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <map>
+#include <cstring>
 #include "MysqlCDriver.h"
 #include <stdlib.h>
 using namespace std;
@@ -20,8 +21,10 @@ struct Points
 };
 
 //get users from mysql and store all in memory
-bool InitUsers(MYSQL *conn, map<char*, struct Points> &users);
-bool GetOneUser(MYSQL *conn, char* userid, struct Points &people, map<char*, struct Points> &users);
-bool GetRow(map<char*, struct Points> &users);
-bool GetRandom(int start, int end);
-int GetPoints(char* userid, map<char*, struct Points> &users);
+bool InitUsers(MYSQL *conn, map<string, struct Points> &users);
+bool GetOneUser(MYSQL *conn, char* userid, struct Points &people, map<string, struct Points> &users);
+bool GetRow(map<string, struct Points> &users);
+int GetRandom(int start, int end);
+int GetPoints(MYSQL *conn, char* userid, map<string, struct Points> &users);
+bool AuthPeople(char *userid, struct Points &node);
+bool UpdateLavePoints(MYSQL *conn, char *userid, int points);

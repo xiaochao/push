@@ -7,6 +7,7 @@
 #include <string.h>
 #include <pthread.h>
 #include "MysqlCDriver.h"
+#include "Points.h"
 #include "OperateChar.h"
 #include <vector>
 #include <map>
@@ -441,19 +442,44 @@ void on_read(int sock, short event, void *arg)
 
 	buf[recvbyte] = '\0';
 	SplitChar(buf, temp, 1);
+	cout<<"get string "<<buf<<endl;
 	if(strcmp(temp, "GPS") == 0)
 	{
 		char userid[256], loni[256], latitu[256];
 		SplitChar(buf, userid, 2);
 		SplitChar(buf, loni, 3);
 		SplitChar(buf, latitu, 4);
-		cout<<"++++++++++"<<userid<<"\t"<<loni<<"\t"<<latitu<<endl;
 		bool lo = InsertLocationTable(location_cons, userid, loni, latitu);
 		if(lo)
-			cout<<"record user location failed"<<endl;
+			cout<<"record user location successfully"<<endl;
 		else
 			cout<<"can not record user location"<<endl;
+		send_num[client_fd].second = time(NULL);
 		return;
+	}
+	if(strcmp(temp, "getpoints") == 0)
+	{
+		map<string, struct Points> mtemp;
+		char buf[128]="成功领取", ctemp[128], userid[128];
+		SplitChar(buf, userid, 2);
+		MYSQL *tempconn = Connect((char*)"127.0.0.1", (char*)"root", (char*)"123456", (char*)"push");
+		int res = InitUsers(tempconn, mtemp);
+		res = GetPoints(tempconn, userid, mtemp);
+		sprintf(ctemp, "%d", res);
+		res = UpdateLavePoints(tempconn, userid, res);
+		mysql_close(tempconn);
+		if(!res)
+			return;
+		strcat(buf, ctemp);
+		strcat(buf, "积分");
+		Json::Value msg;
+		msg["title"] = "领取成功";
+		msg["content"] = buf;
+		string content = msg.toStyledString();
+		if(send(client_fd, content.c_str(), content.length(), 0)<0)
+			cout<<"*****************send getpoints failed"<<endl;
+		return;
+
 	}
 	if(strcmp(temp, "READY") != 0)
 		return;
@@ -521,7 +547,7 @@ void on_write(int sock, short event, void *arg)
 	now_time = time(NULL);
 
 	//send keepalive if no activities in 15mins
-	if((now_time - send_num[clientfd].second) > 10)
+	if((now_time - send_num[clientfd].second) > 900)
 	{
 		if(send(clientfd, "2", sizeof("2"), 0) < 0)
 		{

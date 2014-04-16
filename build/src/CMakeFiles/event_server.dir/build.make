@@ -115,11 +115,35 @@ src/CMakeFiles/event_server.dir/OperateChar.cc.o.provides: src/CMakeFiles/event_
 
 src/CMakeFiles/event_server.dir/OperateChar.cc.o.provides.build: src/CMakeFiles/event_server.dir/OperateChar.cc.o
 
+src/CMakeFiles/event_server.dir/Points.cc.o: src/CMakeFiles/event_server.dir/flags.make
+src/CMakeFiles/event_server.dir/Points.cc.o: ../src/Points.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/event_server.dir/Points.cc.o"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/event_server.dir/Points.cc.o -c /home/xiaochao/project/system/push/src/Points.cc
+
+src/CMakeFiles/event_server.dir/Points.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/event_server.dir/Points.cc.i"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/xiaochao/project/system/push/src/Points.cc > CMakeFiles/event_server.dir/Points.cc.i
+
+src/CMakeFiles/event_server.dir/Points.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/event_server.dir/Points.cc.s"
+	cd /home/xiaochao/project/system/push/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/xiaochao/project/system/push/src/Points.cc -o CMakeFiles/event_server.dir/Points.cc.s
+
+src/CMakeFiles/event_server.dir/Points.cc.o.requires:
+.PHONY : src/CMakeFiles/event_server.dir/Points.cc.o.requires
+
+src/CMakeFiles/event_server.dir/Points.cc.o.provides: src/CMakeFiles/event_server.dir/Points.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/Points.cc.o.provides.build
+.PHONY : src/CMakeFiles/event_server.dir/Points.cc.o.provides
+
+src/CMakeFiles/event_server.dir/Points.cc.o.provides.build: src/CMakeFiles/event_server.dir/Points.cc.o
+
 # Object files for target event_server
 event_server_OBJECTS = \
 "CMakeFiles/event_server.dir/EventServer.cc.o" \
 "CMakeFiles/event_server.dir/MysqlCDriver.cc.o" \
-"CMakeFiles/event_server.dir/OperateChar.cc.o"
+"CMakeFiles/event_server.dir/OperateChar.cc.o" \
+"CMakeFiles/event_server.dir/Points.cc.o"
 
 # External object files for target event_server
 event_server_EXTERNAL_OBJECTS =
@@ -127,6 +151,7 @@ event_server_EXTERNAL_OBJECTS =
 src/event_server: src/CMakeFiles/event_server.dir/EventServer.cc.o
 src/event_server: src/CMakeFiles/event_server.dir/MysqlCDriver.cc.o
 src/event_server: src/CMakeFiles/event_server.dir/OperateChar.cc.o
+src/event_server: src/CMakeFiles/event_server.dir/Points.cc.o
 src/event_server: src/CMakeFiles/event_server.dir/build.make
 src/event_server: src/CMakeFiles/event_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable event_server"
@@ -139,6 +164,7 @@ src/CMakeFiles/event_server.dir/build: src/event_server
 src/CMakeFiles/event_server.dir/requires: src/CMakeFiles/event_server.dir/EventServer.cc.o.requires
 src/CMakeFiles/event_server.dir/requires: src/CMakeFiles/event_server.dir/MysqlCDriver.cc.o.requires
 src/CMakeFiles/event_server.dir/requires: src/CMakeFiles/event_server.dir/OperateChar.cc.o.requires
+src/CMakeFiles/event_server.dir/requires: src/CMakeFiles/event_server.dir/Points.cc.o.requires
 .PHONY : src/CMakeFiles/event_server.dir/requires
 
 src/CMakeFiles/event_server.dir/clean:

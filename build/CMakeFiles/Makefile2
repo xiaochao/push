@@ -186,7 +186,7 @@ clean: src/CMakeFiles/event_client.dir/clean
 src/CMakeFiles/event_server.dir/all:
 	$(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/depend
 	$(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  7 8 9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  7 8 9 10
 	@echo "Built target event_server"
 .PHONY : src/CMakeFiles/event_server.dir/all
 
@@ -196,7 +196,7 @@ all: src/CMakeFiles/event_server.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/event_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/event_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/event_server.dir/rule
@@ -221,7 +221,7 @@ clean: src/CMakeFiles/event_server.dir/clean
 src/CMakeFiles/server.dir/all:
 	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/depend
 	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  10 11 12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  11 12 13
 	@echo "Built target server"
 .PHONY : src/CMakeFiles/server.dir/all
 
@@ -256,7 +256,7 @@ clean: src/CMakeFiles/server.dir/clean
 src/CMakeFiles/test.dir/all:
 	$(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/depend
 	$(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  13 14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/xiaochao/project/system/push/build/CMakeFiles  14 15 16
 	@echo "Built target test"
 .PHONY : src/CMakeFiles/test.dir/all
 
@@ -266,7 +266,7 @@ all: src/CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaochao/project/system/push/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/test.dir/rule

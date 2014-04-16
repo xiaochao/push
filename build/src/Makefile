@@ -341,6 +341,33 @@ OperateChar.cc.s:
 	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/OperateChar.cc.s
 .PHONY : OperateChar.cc.s
 
+Points.o: Points.cc.o
+.PHONY : Points.o
+
+# target to build an object file
+Points.cc.o:
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/Points.cc.o
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/Points.cc.o
+.PHONY : Points.cc.o
+
+Points.i: Points.cc.i
+.PHONY : Points.i
+
+# target to preprocess a source file
+Points.cc.i:
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/Points.cc.i
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/Points.cc.i
+.PHONY : Points.cc.i
+
+Points.s: Points.cc.s
+.PHONY : Points.s
+
+# target to generate assembly for a file
+Points.cc.s:
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/event_server.dir/build.make src/CMakeFiles/event_server.dir/Points.cc.s
+	cd /home/xiaochao/project/system/push/build && $(MAKE) -f src/CMakeFiles/test.dir/build.make src/CMakeFiles/test.dir/Points.cc.s
+.PHONY : Points.cc.s
+
 Server.o: Server.cc.o
 .PHONY : Server.o
 
@@ -421,6 +448,9 @@ help:
 	@echo "... OperateChar.o"
 	@echo "... OperateChar.i"
 	@echo "... OperateChar.s"
+	@echo "... Points.o"
+	@echo "... Points.i"
+	@echo "... Points.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"

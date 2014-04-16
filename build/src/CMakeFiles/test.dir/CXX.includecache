@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/xiaochao/project/system/push/src/MysqlCDriver.cc
-MysqlCDriver.h
-/home/xiaochao/project/system/push/src/MysqlCDriver.h
-iostream
--
-string.h
--
-
 /home/xiaochao/project/system/push/src/MysqlCDriver.h
 stdlib.h
 -
@@ -28,6 +20,22 @@ map
 fstream
 -
 string
+-
+
+/home/xiaochao/project/system/push/src/Points.cc
+Points.h
+/home/xiaochao/project/system/push/src/Points.h
+
+/home/xiaochao/project/system/push/src/Points.h
+iostream
+-
+map
+-
+cstring
+-
+MysqlCDriver.h
+/home/xiaochao/project/system/push/src/MysqlCDriver.h
+stdlib.h
 -
 
 /usr/include/mysql/errmsg.h

@@ -87,7 +87,7 @@ bool UpdatePointsTable(MYSQL *conn, char *userid, char *lave, char *gtime)
 
 bool GetSeedFromTable(MYSQL *conn, char *userid, char *seed, char *seconds)
 {
-	char select[256] = "select * from m_user_points where userid=";
+	char select[256] = "select * from m_user_points where user_id=";
 	strcat(select, userid);
 	int res = mysql_query(conn, select);
 	if(res)

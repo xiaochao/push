@@ -13,6 +13,7 @@ src/CMakeFiles/event_server.dir/EventServer.cc.o
  /home/xiaochao/project/system/push/src/EventServer.cc
  /home/xiaochao/project/system/push/src/MysqlCDriver.h
  /home/xiaochao/project/system/push/src/OperateChar.h
+ /home/xiaochao/project/system/push/src/Points.h
  /usr/include/mysql/errmsg.h
  /usr/include/mysql/my_alloc.h
  /usr/include/mysql/my_list.h
@@ -35,3 +36,15 @@ src/CMakeFiles/event_server.dir/MysqlCDriver.cc.o
 src/CMakeFiles/event_server.dir/OperateChar.cc.o
  /home/xiaochao/project/system/push/src/OperateChar.cc
  /home/xiaochao/project/system/push/src/OperateChar.h
+src/CMakeFiles/event_server.dir/Points.cc.o
+ /home/xiaochao/project/system/push/src/MysqlCDriver.h
+ /home/xiaochao/project/system/push/src/Points.cc
+ /home/xiaochao/project/system/push/src/Points.h
+ /usr/include/mysql/errmsg.h
+ /usr/include/mysql/my_alloc.h
+ /usr/include/mysql/my_list.h
+ /usr/include/mysql/mysql.h
+ /usr/include/mysql/mysql_com.h
+ /usr/include/mysql/mysql_time.h
+ /usr/include/mysql/mysql_version.h
+ /usr/include/mysql/typelib.h

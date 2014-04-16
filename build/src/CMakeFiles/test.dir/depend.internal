@@ -12,8 +12,21 @@ src/CMakeFiles/test.dir/MysqlCDriver.cc.o
  /usr/include/mysql/mysql_time.h
  /usr/include/mysql/mysql_version.h
  /usr/include/mysql/typelib.h
+src/CMakeFiles/test.dir/Points.cc.o
+ /home/xiaochao/project/system/push/src/MysqlCDriver.h
+ /home/xiaochao/project/system/push/src/Points.cc
+ /home/xiaochao/project/system/push/src/Points.h
+ /usr/include/mysql/errmsg.h
+ /usr/include/mysql/my_alloc.h
+ /usr/include/mysql/my_list.h
+ /usr/include/mysql/mysql.h
+ /usr/include/mysql/mysql_com.h
+ /usr/include/mysql/mysql_time.h
+ /usr/include/mysql/mysql_version.h
+ /usr/include/mysql/typelib.h
 src/CMakeFiles/test.dir/test.cc.o
  /home/xiaochao/project/system/push/src/MysqlCDriver.h
+ /home/xiaochao/project/system/push/src/Points.h
  /home/xiaochao/project/system/push/src/test.cc
  /usr/include/mysql/errmsg.h
  /usr/include/mysql/my_alloc.h

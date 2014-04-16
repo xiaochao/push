@@ -2,6 +2,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/event_server.dir/EventServer.cc.o"
   "CMakeFiles/event_server.dir/MysqlCDriver.cc.o"
   "CMakeFiles/event_server.dir/OperateChar.cc.o"
+  "CMakeFiles/event_server.dir/Points.cc.o"
   "event_server.pdb"
   "event_server"
 )

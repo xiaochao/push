@@ -12,7 +12,20 @@ src/CMakeFiles/test.dir/MysqlCDriver.cc.o: /usr/include/mysql/mysql_time.h
 src/CMakeFiles/test.dir/MysqlCDriver.cc.o: /usr/include/mysql/mysql_version.h
 src/CMakeFiles/test.dir/MysqlCDriver.cc.o: /usr/include/mysql/typelib.h
 
+src/CMakeFiles/test.dir/Points.cc.o: ../src/MysqlCDriver.h
+src/CMakeFiles/test.dir/Points.cc.o: ../src/Points.cc
+src/CMakeFiles/test.dir/Points.cc.o: ../src/Points.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/errmsg.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/my_alloc.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/my_list.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/mysql.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/mysql_com.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/mysql_time.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/mysql_version.h
+src/CMakeFiles/test.dir/Points.cc.o: /usr/include/mysql/typelib.h
+
 src/CMakeFiles/test.dir/test.cc.o: ../src/MysqlCDriver.h
+src/CMakeFiles/test.dir/test.cc.o: ../src/Points.h
 src/CMakeFiles/test.dir/test.cc.o: ../src/test.cc
 src/CMakeFiles/test.dir/test.cc.o: /usr/include/mysql/errmsg.h
 src/CMakeFiles/test.dir/test.cc.o: /usr/include/mysql/my_alloc.h
